@@ -1,0 +1,22 @@
+﻿@{
+    List<Product> products = new List<Product>();
+    products.Add(new Product("Milk", 10.99));
+    products.Add(new Product("Bread", 19.99));
+    products.Add(new Product("Eggs", 5.99));
+}
+
+<h1>Product Information</h1>
+
+<table border="0">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var product in products)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>$@product.Price</td>
+        </tr>
+    }
+</table>

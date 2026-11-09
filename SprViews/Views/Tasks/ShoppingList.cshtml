@@ -1,0 +1,15 @@
+﻿@model Dictionary<string, int>
+
+<h1>Our Shopping List</h1>
+
+<table>
+    @foreach ((var key, var value) in Model)
+    {
+        <tr>
+            <td>@key</td>
+            <td>@value</td>
+        </tr>
+    }
+</table>
+
+<partial name="TimeToBuy" />

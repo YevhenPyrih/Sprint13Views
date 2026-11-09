@@ -1,0 +1,6 @@
+﻿@inject SprViews.Services.ITimeService TimeService
+
+<div style="border: 3px solid red;">
+    <h1>It's time for shopping!</h1>
+    <p>@TimeService.GetTimeForTomorrow().ToString("dd.MM.yyyy")</p>
+</div>

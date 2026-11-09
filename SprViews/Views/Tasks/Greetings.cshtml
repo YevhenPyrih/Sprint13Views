@@ -1,0 +1,40 @@
+﻿<h1>Greetings</h1>
+<p>The value of myMessage is: @ViewBag.Message</p>
+
+<p>The greeting is: @ViewBag.Greeting</p>
+
+<p>Here in Ukraine: @DateTime.Now.DayOfWeek</p>
+
+@if (DateTime.Now.Hour < 12)
+{
+    <p>Good morning!</p>
+}
+else
+{
+    <p>Good evening!</p>
+}
+
+<p>Today is @DateTime.Now.DayOfWeek</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>Day</td>
+        <td>@DateTime.Now.DayOfWeek</td>
+    </tr>
+    <tr>
+        <td>Hour</td>
+        <td>@DateTime.Now.Hour</td>
+    </tr>
+    <tr>
+        <td>Minute</td>
+        <td>@DateTime.Now.Minute</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>@DateTime.Now.Second</td>
+    </tr>
+</table>

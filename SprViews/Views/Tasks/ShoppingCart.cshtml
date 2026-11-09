@@ -1,0 +1,27 @@
+﻿<h1>Your Shopping Cart</h1>
+
+@using (Html.BeginForm())
+{   
+    <p>Full Name:</p>
+    @Html.TextBox("Fullname")
+
+    <p>Address:</p>
+    @Html.TextBox("Address")
+
+    <p>Supermarket:</p>
+    @Html.DropDownList("Supermarket", ViewBag.Supermarkets as SelectList)
+
+    <p>Date:</p>
+    @for(int i = 0; i < 3; i++)
+    {
+        @Html.RadioButton("Date", DateTime.Now.AddDays(i))
+        @Html.Label("Date", DateTime.Now.AddDays(i).ToString("dd.MM.yyyy"))
+        <br />
+    }
+
+    <p>Products:</p>
+    @Html.ListBox("Products", ViewBag.Products as MultiSelectList)
+
+    <br />
+    <input type="submit" value="Send" />
+}
